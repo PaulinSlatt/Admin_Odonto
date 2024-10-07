@@ -1,0 +1,30 @@
+﻿@model netchallenge.Domain.Entities.Recomendacao
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="PacienteId"></label>
+        <input asp-for="PacienteId" class="form-control" />
+        <span asp-validation-for="PacienteId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="TratamentoId"></label>
+        <input asp-for="TratamentoId" class="form-control" />
+        <span asp-validation-for="TratamentoId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DataRecomendacao"></label>
+        <input asp-for="DataRecomendacao" class="form-control" type="date" />
+        <span asp-validation-for="DataRecomendacao" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Motivo"></label>
+        <input asp-for="Motivo" class="form-control" />
+        <span asp-validation-for="Motivo" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Salvar</button>
+    <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+</form>

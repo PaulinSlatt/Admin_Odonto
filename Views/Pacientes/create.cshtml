@@ -1,0 +1,56 @@
+﻿@model netchallenge.Domain.Entities.Paciente
+
+<h2>Adicionar Paciente</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label>Nome</label>
+        <input asp-for="Nome" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input asp-for="Email" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Data de Nascimento</label>
+        <input asp-for="DataNascimento" type="date" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Gênero</label>
+        <input asp-for="Genero" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Telefone</label>
+        <input asp-for="Telefone" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Logradouro</label>
+        <input asp-for="Logradouro" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Bairro</label>
+        <input asp-for="Bairro" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>CEP</label>
+        <input asp-for="Cep" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Complemento</label>
+        <input asp-for="Complemento" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Número</label>
+        <input asp-for="Numero" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>UF</label>
+        <input asp-for="Uf" class="form-control" maxlength="2" />
+    </div>
+    <div class="form-group">
+        <label>Cidade</label>
+        <input asp-for="Cidade" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Salvar</button>
+</form>

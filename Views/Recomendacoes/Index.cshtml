@@ -1,0 +1,38 @@
+﻿@model IEnumerable<netchallenge.Domain.Entities.Recomendacao>
+
+@{
+    ViewData["Title"] = "Lista de Recomendações";
+}
+
+<h2>Lista de Recomendações</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Paciente</th>
+            <th>Tratamento</th>
+            <th>Data da Recomendação</th>
+            <th>Motivo</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var recomendacao in Model)
+
+        {
+            <tr>
+                <td>@recomendacao.Paciente.Nome</td> 
+                <td>@recomendacao.Tratamento.Descricao</td> 
+                <td>@recomendacao.DataRecomendacao.ToString("dd/MM/yyyy")</td>
+                <td>@recomendacao.Motivo</td>
+                <td>
+                    <a href="/Recomendacoes/Edit/@recomendacao.Id" class="btn btn-primary">Editar</a>
+                    <a href="/Recomendacoes/Details/@recomendacao.Id" class="btn btn-info">Detalhes</a>
+                    <a href="/Recomendacoes/Delete/@recomendacao.Id" class="btn btn-danger">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/Recomendacoes/Create" class="btn btn-success">Adicionar Nova Recomendação</a>

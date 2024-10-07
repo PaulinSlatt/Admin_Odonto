@@ -1,0 +1,28 @@
+﻿@model netchallenge.Domain.Entities.Sinistro
+
+<h2>Adicionar Novo Sinistro</h2>
+
+<form asp-action="Create">
+    <div class="form-group">
+        <label for="PacienteId">Paciente</label>
+        <input type="number" asp-for="PacienteId" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="TratamentoId">Tratamento</label>
+        <input type="number" asp-for="TratamentoId" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="DataOcorrencia">Data da Ocorrência</label>
+        <input type="date" asp-for="DataOcorrencia" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="ValorReembolsado">Valor Reembolsado</label>
+        <input type="text" asp-for="ValorReembolsado" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="Status">Status</label>
+        <input type="text" asp-for="Status" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Salvar</button>
+    <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+</form>

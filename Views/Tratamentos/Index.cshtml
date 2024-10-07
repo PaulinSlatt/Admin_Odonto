@@ -1,0 +1,31 @@
+﻿@model IEnumerable<netchallenge.Domain.Entities.Tratamento>
+
+<h2>Lista de Tratamentos</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Descrição</th>
+            <th>Tipo</th>
+            <th>Custo</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var tratamento in Model)
+
+        {
+            <tr>
+                <td>@tratamento.Descricao</td>
+                <td>@tratamento.Tipo</td>
+                <td>@tratamento.Custo</td>
+                <td>
+                    <a href="/Tratamentos/Edit/@tratamento.Id" class="btn btn-primary">Editar</a>
+                    <a href="/Tratamentos/Delete/@tratamento.Id" class="btn btn-danger">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/Tratamentos/Create" class="btn btn-success">Adicionar Novo Tratamento</a>

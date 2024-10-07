@@ -1,0 +1,11 @@
+﻿@model netchallenge.Domain.Entities.Paciente
+
+<h2>Excluir Paciente</h2>
+
+<p>Tem certeza de que deseja excluir o paciente @Model.Nome?</p>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Excluir</button>
+    <a href="/Pacientes" class="btn btn-secondary">Cancelar</a>
+</form>

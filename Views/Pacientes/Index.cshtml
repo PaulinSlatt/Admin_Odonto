@@ -1,0 +1,41 @@
+﻿@model IEnumerable<netchallenge.Domain.Entities.Paciente>
+
+<h2>Pacientes</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Telefone</th>
+            <th>Logradouro</th>
+            <th>Bairro</th>
+            <th>CEP</th>
+            <th>Cidade</th>
+            <th>UF</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var paciente in Model)
+
+        {
+            <tr>
+                <td>@paciente.Nome</td>
+                <td>@paciente.Email</td>
+                <td>@paciente.Telefone</td>
+                <td>@paciente.Logradouro</td>
+                <td>@paciente.Bairro</td>
+                <td>@paciente.Cep</td>
+                <td>@paciente.Cidade</td>
+                <td>@paciente.Uf</td>
+                <td>
+                    <a href="/Pacientes/Edit/@paciente.Id" class="btn btn-primary">Editar</a>
+                    <a href="/Pacientes/Delete/@paciente.Id" class="btn btn-danger">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/Pacientes/Create" class="btn btn-success">Adicionar Paciente</a>
