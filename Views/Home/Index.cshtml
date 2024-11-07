@@ -2,55 +2,96 @@
     ViewData["Title"] = "Sistema Odontológico - Página Inicial";
 }
 
-<div class="jumbotron text-center">
-    <h1 class="display-4">Bem-vindo ao Sistema Odontológico</h1>
-    <p class="lead">Gerencie seus pacientes, tratamentos, sinistros e recomendações de maneira fácil e eficiente.</p>
-    <hr class="my-4">
-    <p>Escolha uma das opções abaixo para começar a gerenciar o sistema:</p>
+<div class="d-flex flex-column min-vh-100">
+    <div class="jumbotron text-center bg-gradient-primary text-white p-5 rounded shadow-sm">
+        <h1 class="display-4 font-weight-bold">Bem-vindo ao Sistema Odontológico</h1>
+        <p class="lead">Gerencie seus pacientes, tratamentos, sinistros e recomendações com facilidade e eficiência.</p>
+        <hr class="my-4 bg-light">
+        <p>Escolha uma das opções abaixo para começar:</p>
+    </div>
+
+    <div class="container flex-grow-1">
+        <div class="row text-center">
+            <div class="col-md-3">
+                <div class="card mb-4 shadow-sm border-0 hover-card">
+                    <div class="card-body">
+                        <h4 class="card-title font-weight-bold text-primary">Pacientes</h4>
+                        <p class="card-text text-muted">Gerencie os dados dos pacientes cadastrados.</p>
+                        <a href="/Pacientes" class="btn btn-primary btn-block"><i class="fas fa-user"></i> Ver Pacientes</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card mb-4 shadow-sm border-0 hover-card">
+                    <div class="card-body">
+                        <h4 class="card-title font-weight-bold text-primary">Tratamentos</h4>
+                        <p class="card-text text-muted">Controle os tratamentos odontológicos oferecidos.</p>
+                        <a href="/Tratamentos" class="btn btn-primary btn-block"><i class="fas fa-tooth"></i> Ver Tratamentos</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card mb-4 shadow-sm border-0 hover-card">
+                    <div class="card-body">
+                        <h4 class="card-title font-weight-bold text-primary">Sinistros</h4>
+                        <p class="card-text text-muted">Gerencie os sinistros dos pacientes.</p>
+                        <a href="/Sinistros" class="btn btn-primary btn-block"><i class="fas fa-file-alt"></i> Ver Sinistros</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card mb-4 shadow-sm border-0 hover-card">
+                    <div class="card-body">
+                        <h4 class="card-title font-weight-bold text-primary">Recomendações</h4>
+                        <p class="card-text text-muted">Administre recomendações preventivas.</p>
+                        <a href="/Recomendacoes" class="btn btn-primary btn-block"><i class="fas fa-clipboard-list"></i> Ver Recomendações</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-<div class="row text-center">
-    <div class="col-md-3">
-        <div class="card mb-4 box-shadow">
-            <div class="card-body">
-                <h4 class="card-title">Pacientes</h4>
-                <p class="card-text">Gerenciar os dados dos pacientes cadastrados no sistema.</p>
-                <a href="/Pacientes" class="btn btn-primary">Ver Pacientes</a>
-            </div>
-        </div>
-    </div>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+    }
 
-    <div class="col-md-3">
-        <div class="card mb-4 box-shadow">
-            <div class="card-body">
-                <h4 class="card-title">Tratamentos</h4>
-                <p class="card-text">Gerenciar os tratamentos odontológicos oferecidos.</p>
-                <a href="/Tratamentos" class="btn btn-primary">Ver Tratamentos</a>
-            </div>
-        </div>
-    </div>
+    .bg-gradient-primary {
+        background: linear-gradient(90deg, #007bff 0%, #0056b3 100%);
+        color: white;
+    }
 
-    <div class="col-md-3">
-        <div class="card mb-4 box-shadow">
-            <div class="card-body">
-                <h4 class="card-title">Sinistros</h4>
-                <p class="card-text">Visualizar e gerenciar os sinistros dos pacientes.</p>
-                <a href="/Sinistros" class="btn btn-primary">Ver Sinistros</a>
-            </div>
-        </div>
-    </div>
+    .jumbotron {
+        padding: 2rem 1rem;
+    }
 
-    <div class="col-md-3">
-        <div class="card mb-4 box-shadow">
-            <div class="card-body">
-                <h4 class="card-title">Recomendações</h4>
-                <p class="card-text">Gerenciar as recomendações de tratamentos preventivos.</p>
-                <a href="/Recomendacoes" class="btn btn-primary">Ver Recomendações</a>
-            </div>
-        </div>
-    </div>
-</div>
+    .container {
+        margin-top: 40px;
+    }
 
-<footer class="text-center mt-4">
-    <p>&copy; 2024 Sistema Odontológico. Todos os direitos reservados.</p>
-</footer>
+    .card {
+        border-radius: 10px;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .hover-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+        color: white;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+</style>
